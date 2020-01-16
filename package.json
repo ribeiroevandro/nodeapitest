@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node dist",
+    "start": "node dist/index.js",
     "dev": "nodemon src/index.js",
     "build": "node dist/index.js",
-    "deploy": "rm -rf dist && babel src -D -d dist --presets env"
+    "deploy": "rm -rf dist && babel src -D -d dist --presets env",
+    "postinstall": "yarn start"
   },
   "dependencies": {
     "cors": "^2.8.5",
